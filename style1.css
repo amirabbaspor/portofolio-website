@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(0deg,red ,black 50%);
+    border-radius: 20px;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@keyframes up-down {
+    35% {
+        transform: translateY(100px);
+    }
+    70% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #00000033;
+    border-radius: 25px;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+}
+
+header h2 {
+    color: red;
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+nav {
+    margin-right: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    background-color: #00000033;
+    transform: translateY(10%);
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    section img {
+        display: none;
+    }
+
+    section {
+        justify-content: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .menu {
+        display: block;
+        font-size: 45px;
+        margin-right: 20px;
+        transition: 0.3 ease;
+        cursor: pointer;
+        color: white;
+    }
+
+    header h2 {
+        margin-left: 30px;
+    }
+
+    nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 68px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        background-color: #333;
+        height: 0;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    * {
+        overflow: auto;
+    }
+}
+
+.home {
+    color: red;
+}
+
+section {
+    display: flex;
+    gap: 75px;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+
+section img {
+    border-radius: 50%;
+    width: 250px;
+    margin-left: 25%;
+    transition: 0.7s;
+    border: #333 2px solid;
+}
+
+section img:hover {
+    border-radius: 20px;
+}
+
+.main {
+    color: white;
+}
+
+.main h1 {
+    color: red;
+    transition: 0.5 ease;
+    display: inline-flex;
+    transition: 0.5s;
+    font-size: 1.5rem;
+}
+
+.main h1:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.dev {
+    color: red;
+    padding-right: 5px;
+    animation: cursor 1s ease infinite;
+}
+
+.main p {
+    width: 360px;
+    margin-top: 10px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.socials li {
+    list-style: none;
+}
+
+.socials li a {
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    border: 2px solid red;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.socials li a:hover {
+    box-shadow: 0 0 25px red;
+    transform: scale(1.2, 1.2) translateY(-10px);
+}
+
+.telegram:hover {
+    color: blue;
+}
+
+.youtube:hover {
+    color: red;
+}
+
+.discord:hover {
+    color: blue;
+}
+
+.git:hover:hover {
+    color: white;
+}
+
+hr {
+    width: 100%;
+}
+
+@keyframes cursor {
+    to {
+        border-right: 3px solid #b74b4b;
+    }
+}
+
+
+.projects-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-c h1 {
+    color: white;
+    padding: 20px;
+}
+
+.projects-c h3,
+p {
+    color: rgb(240, 230, 230);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 20px 0px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px orange;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+}
+
+.card ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.cards li {
+    background-color: #b74b4b;
+    padding: 10px;
+    border-radius: 20px 10px;
+    box-shadow: 0 0 10px red;
+    transition: 0.7s ease;
+}
+
+.cards li:hover {
+    box-shadow: 0 0 20px black;
+}
+
+
+.skills-c {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.skills-c h1 {
+    color: white;
+    padding: 20px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #3f3333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 20px orange;
+    transition: 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 0 30px red;
+}
+
+.skill i {
+    padding-right: 10px;
+}
+
+.infor{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px 0px;
+    transition: 0.6s ease;
+}
+.card:hover .infor{
+    height: 100%;
+}
+.infor a{
+    color: white;
+    text-decoration: none;
+}
